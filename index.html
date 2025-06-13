@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Estonian Developer</title>
+    <style>
+        /* ESTONIAN BLUE (#4891FF) ACCENT */
+        :root { --estonia-blue: #4891ff; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            max-width: 800px; 
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { color: var(--estonia-blue); }
+        .project {
+            border-left: 4px solid var(--estonia-blue);
+            padding: 10px 15px;
+            margin: 25px 0;
+            background: #f8f9fa;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        /* Tech stack badges */
+        .badge {
+            display: inline-block;
+            background: #e9ecef;
+            border-radius: 4px;
+            padding: 3px 8px;
+            margin: 0 5px 5px 0;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tere! 👋 I'm [Your Name]</h1>
+        <p>EMTA-registered FIE building <strong>Python tools</strong> and <strong>Unreal experiences</strong> from Tartu</p>
+    </header>
+
+    <section>
+        <h2>My Projects</h2>
+        
+        <!-- PROJECT 1: PYTHON -->
+        <div class="project">
+            <h3>Estonian Transport Data Analyzer</h3>
+            <div>
+                <span class="badge">Python</span>
+                <span class="badge">Pandas</span>
+                <span class="badge">Data Visualization</span>
+            </div>
+            <p>Processed Tallinn public transport datasets to optimize routes. Reduced simulated commute times by 17%.</p>
+        </div>
+        
+        <!-- PROJECT 2: UNREAL ENGINE -->
+        <div class="project">
+            <h3>Baltic Forest Environment (UE5)</h3>
+            <div>
+                <span class="badge">Unreal Engine 5</span>
+                <span class="badge">Nanite</span>
+                <span class="badge">Lumen</span>
+            </div>
+            <p>Procedurally generated Estonian woodland biome with dynamic weather. 120 FPS on mid-range hardware.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>⚖️ <strong>EMTA FIE Reg:</strong> [Your Registration Number] | 🌐 Hosted on GitHub Pages</p>
+        <p>📍 Tartu, Estonia | 📧 <a href="mailto:you@email.ee">you@email.ee</a></p>
+    </footer>
+</body>
+</html>
