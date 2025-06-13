@@ -1,79 +1,63 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Estonian Developer</title>
+    <title>My GitHub Page</title>
     <style>
-        /* ESTONIAN BLUE (#4891FF) ACCENT */
-        :root { --estonia-blue: #4891ff; }
-        body { 
-            font-family: 'Segoe UI', Tahoma, sans-serif; 
-            max-width: 800px; 
-            margin: 40px auto;
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-            line-height: 1.6;
+            background-color: #f0f8ff;
         }
-        header { text-align: center; margin-bottom: 40px; }
-        h1 { color: var(--estonia-blue); }
-        .project {
-            border-left: 4px solid var(--estonia-blue);
-            padding: 10px 15px;
-            margin: 25px 0;
-            background: #f8f9fa;
-        }
-        footer {
+        .container {
             text-align: center;
-            margin-top: 50px;
-            color: #666;
-            font-size: 0.9em;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
-        /* Tech stack badges */
-        .badge {
+        h1 {
+            color: #2c3e50;
+        }
+        .emoji {
+            font-size: 5rem;
+            margin: 20px;
+        }
+        .github-link {
             display: inline-block;
-            background: #e9ecef;
-            border-radius: 4px;
-            padding: 3px 8px;
-            margin: 0 5px 5px 0;
-            font-size: 0.85em;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2ea44f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Tere! 👋 I'm [Your Name]</h1>
-        <p>EMTA-registered FIE building <strong>Python tools</strong> and <strong>Unreal experiences</strong> from Tartu</p>
-    </header>
+    <div class="container">
+        <div class="emoji">🚀</div>
+        <h1>Hello GitHub!</h1>
+        <p>This HTML file is successfully rendering on GitHub</p>
+        <p>You can view this page at:</p>
+        <code>https://<span id="username">your-username</span>.github.io/<span id="repo">your-repository</span>/</code>
+        
+        <a class="github-link" href="https://docs.github.com/en/pages" target="_blank">
+            Set up GitHub Pages
+        </a>
+    </div>
 
-    <section>
-        <h2>My Projects</h2>
-        
-        <!-- PROJECT 1: PYTHON -->
-        <div class="project">
-            <h3>Estonian Transport Data Analyzer</h3>
-            <div>
-                <span class="badge">Python</span>
-                <span class="badge">Pandas</span>
-                <span class="badge">Data Visualization</span>
-            </div>
-            <p>Processed Tallinn public transport datasets to optimize routes. Reduced simulated commute times by 17%.</p>
-        </div>
-        
-        <!-- PROJECT 2: UNREAL ENGINE -->
-        <div class="project">
-            <h3>Baltic Forest Environment (UE5)</h3>
-            <div>
-                <span class="badge">Unreal Engine 5</span>
-                <span class="badge">Nanite</span>
-                <span class="badge">Lumen</span>
-            </div>
-            <p>Procedurally generated Estonian woodland biome with dynamic weather. 120 FPS on mid-range hardware.</p>
-        </div>
-    </section>
-    
-    <footer>
-        <p>⚖️ <strong>EMTA FIE Reg:</strong> [Your Registration Number] | 🌐 Hosted on GitHub Pages</p>
-        <p>📍 Tartu, Estonia | 📧 <a href="mailto:you@email.ee">you@email.ee</a></p>
-    </footer>
+    <script>
+        // Get current URL path to suggest GitHub Pages URL
+        const paths = window.location.pathname.split('/');
+        if (paths.length > 2) {
+            document.getElementById('username').textContent = paths[1];
+            document.getElementById('repo').textContent = paths[2];
+        }
+    </script>
 </body>
 </html>
